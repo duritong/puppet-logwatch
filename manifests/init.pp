@@ -16,7 +16,7 @@ class logwatch::base {
     }
 
     file{"/etc/logwatch/conf/logwatch.conf":
-        source => [ "puppet://$server/logwatch/config/logwatch.conf",
+        source => [ "puppet://$server/modules/logwatch/config/logwatch.conf",
                     "puppet://$server/files/config/logwatch.conf" ],
         require => Package[logwatch],
         mode => 0644, owner => root, group => 0;

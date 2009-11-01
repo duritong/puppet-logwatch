@@ -4,7 +4,7 @@
 class logwatch::logserver inherits logwatch::base {
 
     file{"/opt/bin/logwatch_wrapper.rb":
-        source => "puppet://$server/logwatch/scripts/logwatch_warpper.rb",
+        source => "puppet://$server/modules/logwatch/scripts/logwatch_warpper.rb",
         require => [ File["/opt/bin"], Package[logwatch] ],
         mode => 0700, owner => root, group => 0;
     }
