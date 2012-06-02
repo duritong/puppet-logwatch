@@ -6,5 +6,5 @@
 
 
 class logwatch {
-    include logwatch::base
+  include logwatch::base
 }
